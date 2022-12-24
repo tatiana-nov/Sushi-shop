@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	<title>Sushi shop</title>
+	<link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link href="https://fonts.googleapis.com/css?family=Merriweather:300,400,400i,700&amp;subset=cyrillic-ext" rel="stylesheet">
+
+</head>
+
+<body>
+
+	<header class="header">
+		<div class="container text-center">
+			<img src="img/logo/logo.svg" width="92" alt="Sushi">
+			<div class="display-4">Sushi shop</div>
+			<p class="lead">Quick and tasty</p>
+		</div>
+	</header>
+
+	<div class="container mb-5">
+		<div class="row">
+			<div class="col-md-8">
+				<div class="row" id="products-container">
+
+					<div class="col-md-6">
+						<div class="card mb-4" data-id="01">
+							<img class="product-img" src="img/roll/philadelphia.jpg" alt="">
+							<div class="card-body text-center">
+								<h4 class="item-title">Philadelphia HIT</h4>
+								<p><small data-items-in-box class="text-muted">6 pcs.</small></p>
+
+								<!-- счетчик-->
+								<div class="details-wrapper">
+									<div class="items counter-wrapper">
+										<div class="items__control" data-action="minus">-</div>
+										<div class="items__current" data-counter>1</div>
+										<div class="items__control" data-action="plus">+</div>
+									</div>
+									<div class="price">
+										<div class="price__weight">180gr.</div>
+										<div class="price__currency">30 €</div>
+									</div>
+								</div>
+
+								<button data-cart type="button" class="btn btn-block btn-outline-warning">+ order online</button>
+
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+			<div class="col-md-4">
+
+				<div class="card mb-4">
+					<div class="card-body">
+						<h5 class="card-title">Your order</h4>
+						<div data-cart-empty class="alert alert-secondary" role="alert">
+							Empty
+						</div>
+						<!-- cart-wrapper -->
+						<div class="cart-wrapper">
+
+						</div>
+						<!-- // cart-wrapper -->
+
+						<div class="cart-total">
+							<p data-cart-delivery class="none">
+								<span class="h5">Delivery:</span>
+								<span class="delivery-cost"></span> </br>
+								<span class="small">free shipping on orders over 60€</span>
+							</p>
+							<p><span class="h5">Total:</span> <span class="total-price">0</span> <span class="euro">€</span></p>
+						</div>
+					</div>
+
+					<div id="order-form" class="card-body border-top none">
+						<h5 class="card-title">Confirm</h4>
+						<form>
+							<div class="form-group">
+								<input type="text" class="form-control" placeholder="Phone number">
+							</div>
+							<button type="submit" class="btn btn-block btn-outline-warning">Order</button>
+						</form>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+<script src="./js/renderProducts.js"> </script>
+<script src="./js/calcCartPrice.js"> </script>
+<script src="./js/toggleCartStatus.js"> </script> 
+<script src="./js/counter.js"> </script>
+<script src="./js/cart-02.js"> </script>
+
+
+</body>
+
+</html>
